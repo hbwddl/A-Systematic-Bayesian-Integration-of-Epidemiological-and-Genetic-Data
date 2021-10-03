@@ -30,11 +30,11 @@
 
 
 
-#define path1 "/xx/scripts/" /*folder for the codes*/
+#define path1 "/Users/hbwadde/OneDrive - Emory University/Documents/Research/Phylodynamics/Code/A-Systematic-Bayesian-Integration-of-Epidemiological-and-Genetic-Data/scripts/" /*folder for the codes*/
 
-#define path2 "/xx/data/fmd_2001/"      /*FMD data*/
+#define path2 "/Users/hbwadde/OneDrive - Emory University/Documents/Research/Phylodynamics/Code/A-Systematic-Bayesian-Integration-of-Epidemiological-and-Genetic-Data/data/fmd_2001/"      /*FMD data*/
 // #define path2b "/home/sl451/Dropbox/HWU/phylo_seir_fmd_inference/data/fmd_2001_partial_randscpt_2/set 1_10/"       /*FMD data*/
-#define path4 "xx/mcmc samples/"      /*output folder*/
+#define path4 "/Users/hbwadde/OneDrive - Emory University/Documents/Research/Phylodynamics/Code/A-Systematic-Bayesian-Integration-of-Epidemiological-and-Genetic-Data/mcmc samples/"      /*output folder*/
 
 using namespace std;
 //using namespace Rcpp;

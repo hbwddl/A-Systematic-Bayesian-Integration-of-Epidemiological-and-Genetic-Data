@@ -5,14 +5,14 @@
 #define _FUNCTIONS_H_INCLUDED_
 
 #include<iostream>
-#include<vector>
-#include<algorithm>
+#include <vector>
+#include <algorithm>
 #include <fstream>
 #include <string>
-#include<sstream>
+#include <sstream>
 #include <ctime>
 #include <cstdlib>
-#include<time.h>
+#include <time.h>
 #include <cmath>
 #include <stdio.h>
 #include <numeric>
@@ -461,7 +461,7 @@ void residual_sub_nucle (vector<double>& , const vector<int>&, const vector<int>
 //-----------------------------
 
 void IO_simpara(para_key&, para_aux&);
-void IO_simdata(para_key, para_aux ,vector < vector<double> >& , epi_struct& , nt_struct&, vector<int>&,vector<int>&);
+void IO_simdata(para_key, para_aux , vector < vector<double> >& , epi_struct& , nt_struct&, vector<int>&, vector<int>&);
 //void lh_plot (para_key, para_aux , vector< vector<double> >, vector<int>, vector<int> , vector<int> , vector<int> ,vector<int>, vector<int> ,vector<int>, vector<double> , vector<double> , vector<double>, vector<int>);
 
 void initialize_mcmc(para_key& , para_aux&,  vector<int>&, vector<int>& , vector<int>&, vector<int>& , vector<int>&,  vector<int>& , vector<int>&, vector<int>&,  vector<double>& , vector<double>& , vector<double>&, vector<int>& ,  vector<double>& , vector<int>& , vector<int>& , vector < vector<double> >&, vector <double>&, vec2int&, vector<double>&, nt_struct&, vector<int>&);

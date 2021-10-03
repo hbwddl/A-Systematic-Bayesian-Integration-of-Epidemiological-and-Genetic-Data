@@ -4,7 +4,7 @@
 #ifndef _FUNCTIONS_H_INCLUDED_ //include guard
 #define _FUNCTIONS_H_INCLUDED_
 
-#include<iostream>
+#include <iostream>
 #include <vector>
 #include <algorithm>
 #include <fstream>
@@ -41,7 +41,7 @@ using namespace std;
 
 
 typedef  vector < vector<int> > vec2int;
-typedef  vector < vector<double> > vec2d;
+typedef  vector < vector<double> > vec2d; // Defining data types that can hold 2d data. vector of vectors (vectors can expand and contract iirc)
 
 typedef boost::mt19937 base_generator_type;
 
@@ -121,7 +121,7 @@ double p_ber; // varation parameter p (for the master sequence)
 
 struct para_aux{ // other model quantities to be fixed/known
 int n, n_seq, n_base; //n, population size (number of farms/sites); n_seq, max number of sequences for a farm (to reserve the capacity of the vector storing sequence data); n_base, number of bases for a sequence
-string kernel_type; // type of spatial kernel used e.g exponential/power-law
+std::string kernel_type; // type of spatial kernel used e.g exponential/power-law
 double dimen_x,dimen_y; // ignore for now (was dimension of space for simulation)
 double t_max,unassigned_time; // t_max is the upper limit of observation period; unassigned_time is an abritary extreme value e.g. 9e+10 , to indicate that an event does not happen e.g. no infection
 int seed; // random seed used, may be ignored
@@ -158,6 +158,7 @@ vector<long double> log_f_S, log_f_Snull;// log_f_S, log-likelihood  of sequence
 
 
 //----------------------------
+// inline functions: may appear in other files?
 
 inline long double func_kernel (double, double, double, double, double, double, const string&); // function prototype for calculating kernel distance
 
@@ -187,7 +188,9 @@ inline void seq_propose_uncond(vector<int>& ,  double&, const vector<int>& , con
 inline void seq_backward_pr_cond(const vector<int>& , double& , const vector<int>& , const vector<int>&, const double& , const double& ,  const double& ,   const double& , const double& ,int );
 
 inline void seq_backward_pr_uncond(const vector<int>& ,  double&, const vector<int>& , const double&, const double& , const double& ,  const double& , const double& , int);
+
 //--------------------------
+
 double log_lh_base (int&, int&, double, double  , double, double);
 
 double log_lh_seq (vector<int>&, vector<int>& , double , double  , double , double , int );
@@ -216,7 +219,7 @@ double mu_2_Clh;
 double p_ber_Clh;
 
 int n_Clh;
-string kernel_type_Clh;
+std::string kernel_type_Clh;
 double dimen_x_Clh,dimen_y_Clh;
 double t_max_Clh,unassigned_time_Clh;
 int seed_Clh;
@@ -317,7 +320,7 @@ private:
 // double k_2_CUPDATE;
 
 int n_CUPDATE;
-string kernel_type_CUPDATE;
+std::string kernel_type_CUPDATE;
 double dimen_x_CUPDATE,dimen_y_CUPDATE;
 double t_max_CUPDATE,unassigned_time_CUPDATE;
 int seed_CUPDATE;

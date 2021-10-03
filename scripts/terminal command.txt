@@ -1,0 +1,1 @@
+clang++ phylo_seir_fmd_inference.cpp -o phylo_seir_fmd_inference -I "/opt/homebrew/include/" -std=c++11 -v &> output.txt
